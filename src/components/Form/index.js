@@ -4,9 +4,9 @@ import { addQuestion, updateQuestion } from '../../helpers/data/questionData';
 
 export default class QuestionForm extends Component {
   state = {
-    firebaseKey: this.props.board?.firebaseKey || '',
-    question: this.props.board?.question || '',
-    answer: this.props.board?.answer || '',
+    firebaseKey: this.props.questionData?.firebaseKey || '',
+    question: this.props.questionData?.question || '',
+    answer: this.props.questionData?.answer || '',
   }
 
   handleChange = (e) => {
@@ -43,7 +43,7 @@ export default class QuestionForm extends Component {
   render() {
     const { success } = this.state;
     return (
-      <>
+      <div className="d-flex flex-column">
       { success && (<div className="alert alert-success" role="alert">Your Question was Updated/Created</div>)
       }
       <form onSubmit={this.handleSubmit}>
@@ -71,7 +71,7 @@ export default class QuestionForm extends Component {
         </div>
          <button ref={(btn) => { this.btn = btn; }} className="btn btn-primary m-2">Submit</button>
       </form>
-      </>
+      </div>
     );
   }
 }

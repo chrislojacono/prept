@@ -1,4 +1,5 @@
 import React from 'react';
+import { deleteQuestion } from '../../helpers/data/questionData';
 
 export default function AnswerCard({ questionData, showNextQuestion }) {
   return (
@@ -8,8 +9,13 @@ export default function AnswerCard({ questionData, showNextQuestion }) {
     <div className='card'>
       <div className='card-body'>
         <h5 className='card-title'>{questionData.answer}</h5>
+        <div className="d-flex flex-column">
+        <button className="btn btn-info"onClick={() => showNextQuestion()}>Show Next Question</button>
+        <button className="btn btn-danger" onClick={() => deleteQuestion(questionData.firebaseKey)}>
+        Delete Card
+      </button>
+        </div>
       </div>
-      <button className="m-2 btn btn-info"onClick={() => showNextQuestion()}>Show Next Question</button>
     </div>
     </div>
     </>
