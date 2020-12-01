@@ -8,13 +8,16 @@ body {
 }
 
 .navbar, .navbar-brand {
-  background-color: rgb(236, 24, 24) !important;
+  background-color: rgb(212, 40, 40) !important;
   color: white !important;
   font-size: 1.5rem
 }
 
 .flash-card {
   margin: 2rem;
+}
+.nav-link{
+  color: #fff;
 }
 
 .card-body {

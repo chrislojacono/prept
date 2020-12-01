@@ -12,6 +12,10 @@ export default function NavBar() {
       <Navbar expand='md' className='navbar justify-content-between'>
           <Nav className='mr-auto' navbar>
             <NavItem>
+              <Link className="nav-link" to='/'>Home</Link>
+            </NavItem>
+            <NavItem>
+              <Link className="nav-link" to='/flashcard'>Flash Cards</Link>
             </NavItem>
           </Nav>
           </Navbar>
